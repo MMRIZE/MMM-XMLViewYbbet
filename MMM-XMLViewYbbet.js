@@ -65,7 +65,7 @@ Module.register("MMM-XMLViewYbbet", {
         if (data.length > 0) {
           Log.log(`Scanned ${data.length} items`)
           self.items = data
-          this.index = 0
+          self.index = 0
           self.draw()
         }
       }
@@ -73,7 +73,7 @@ Module.register("MMM-XMLViewYbbet", {
     xhttp.open("GET", this.config.xmlURL, true)
     xhttp.send()
 
-    this.timer = setTimeout(() => {
+    this.scanTimer = setTimeout(() => {
       this.scan()
     }, this.config.scanInterval)
   },
