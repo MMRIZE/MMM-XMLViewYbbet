@@ -79,7 +79,7 @@ Module.register("MMM-XMLViewYbbet", {
   },
 
   draw: function () {
-    if (this.data.length < 1) {
+    if (this.items.length < 1) {
       Log.warn('There is no item to draw')
       return
     }
